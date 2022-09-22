@@ -1,0 +1,22 @@
+version: 2
+
+sources:
+  - name: source_data
+    description: 'All data we receive from the Processing SQL server, like orders, error codes, etc'
+    database: SNOWFLAKE_SAMPLE_DATA
+    schema: TPCH_SF1
+    tables:
+      - name: customer
+        description: 'customer information'
+        cloumns:
+          - name: c_custkey
+            description: 'unique customer id and not null'
+            tests:
+              - unique
+      - name: orders
+      - name: lineitem
+      - name: part
+      - name: supplier
+      - name: nation
+      - name: region
+      - name: partsupp

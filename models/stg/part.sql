@@ -1,0 +1,1 @@
+SELECT * from {{source('source_data', 'part')}}

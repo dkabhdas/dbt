@@ -1,0 +1,22 @@
+version: 2
+
+models:
+  - name: stg_customer
+    description: 'customer information'
+    columns: 
+      - name: C_CUSTKEY
+        description: 'unique customer id'
+        tests:
+                - not_null
+  - name: stg_nation
+    columns: 
+      - name: N_REGIONKEY
+        tests:
+                - not_null
+                - accepted_values: 
+                    values: 
+                        - 1
+                        - 2
+                        - 3
+                        - 4
+                        - 0
