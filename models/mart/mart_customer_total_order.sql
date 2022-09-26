@@ -1,6 +1,3 @@
-{{config(
-    materialized="table"
-)}}
 
 with dim_customer as (
 
